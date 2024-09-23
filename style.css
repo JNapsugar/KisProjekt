@@ -1,0 +1,36 @@
+html{
+    background-image: url('/img/hatter4.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+#content{
+    background-color: rgba(156, 148, 211, 0.637);
+    color: black;
+    width: 60%;
+    padding: 2% 10% ;
+    margin: auto;
+    display: block;
+    border-radius: 3rem;
+    font-weight: 800;
+    font-size: 25px;
+    font-family:'Times New Roman', Times, serif;    
+}
+
+label{
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.textinput{
+    width: 30rem;
+}
+
+label{
+    margin-left: 1rem;
+}
+
+p{
+    margin-bottom: 0.5rem;
+}

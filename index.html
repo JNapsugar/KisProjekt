@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regisztráció</title>
+    <link rel="icon" type="image/x-icon" href="https://www.flaticon.com/free-icons/register">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="content">
+        <h1>Regisztráció</h1>
+        <p>Név</p>
+            <input type="text" id="Nev" class="textinput">
+        <p>Kor</p>
+            <input type="range" id="Kor" class="textinput">
+        <p>Nem</p>
+        <p>Foglalkozás</p>
+            <input type="text" id="Foglalkozás" class="textinput">
+        
+        <p>Ágazat</p>
+            <label>Informatika</label><input type="radio" name="agazat" id="informatikaRB">
+            <label>Gépipar</label><input type="radio" name="agazat" id="gepiparRB">
+            <label>Építészipar</label><input type="radio" name="agazat" id="epitesziparRB">
+            <label>Élelmiszeripar</label><input type="radio" name="agazat" id="elelmiszeriparRB">
+            <label>Szépészet</label><input type="radio" name="agazat" id="szepeszetRB"><br>
+            <label>Gazdasági</label><input type="radio" name="agazat" id="gazdasagiRB">
+            <label>Jogi</label><input type="radio" name="agazat" id="jogiRB">
+            <label>Mezőgazdasági</label><input type="radio" name="agazat" id="mezogazdasagiRB">
+            <label>Művészeti</label><input type="radio" name="agazat" id="muveszetiRB">
+            <label>Vendéglátói</label><input type="radio" name="agazat" id="vendeglatoiRB">
+        <p>Email</p>
+            <input type="text" id="Email" class="textinput">
+        <p>Jelszó</p>
+            <input type="text" id="Jelszo" class="textinput">
+            <button>Generálás</button>
+            <button>Inkább magam adom meg</button>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
