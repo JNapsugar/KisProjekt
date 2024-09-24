@@ -4,38 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regisztráció</title>
-    <link rel="icon" type="image/x-icon" href="https://www.flaticon.com/free-icons/register">
+    <link rel="icon" type="image/x-icon" href="img/Icon/Regisztracio.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="content">
         <h1>Regisztráció</h1>
+        <img src="/img/Icon/nev.png" class="icon">
         <p>Név</p>
-            <input type="text" id="Nev" class="textinput">
+            <input type="text" id="Nev" class="textinput"><br>
+        <img src="/img/Icon/eletkor.png" class="icon">
         <p>Kor</p>
-            <input type="range" id="Kor" class="textinput">
+            <input type="range" id="Kor" min="1" max="100" onchange="Kor(this.value, this.id);">
+            <input type="number" id="KorText" value="" class="textinput" onchange="Kor(this.value, this.id);"><br>
+        <img src="./img/Icon/nem.png" class="icon">
         <p>Nem</p>
+            <label>Nő</label><input type="radio" name="nem" id="NoRB">
+            <label>Férfi</label><input type="radio" name="nem" id="FerfiRB">
+            <label>Egyéb</label><input type="radio" name="nem" id="egyebNemRB"><br>
+        <img src="./img/Icon/foglalkozas.png" class="icon">
         <p>Foglalkozás</p>
-            <input type="text" id="Foglalkozás" class="textinput">
-        
+            <input type="text" id="Foglalkozás" class="textinput"><br>
+        <img src="/img/Icon/agazat.png" class="icon">
         <p>Ágazat</p>
-            <label>Informatika</label><input type="radio" name="agazat" id="informatikaRB">
-            <label>Gépipar</label><input type="radio" name="agazat" id="gepiparRB">
-            <label>Építészipar</label><input type="radio" name="agazat" id="epitesziparRB">
-            <label>Élelmiszeripar</label><input type="radio" name="agazat" id="elelmiszeriparRB">
-            <label>Szépészet</label><input type="radio" name="agazat" id="szepeszetRB"><br>
-            <label>Gazdasági</label><input type="radio" name="agazat" id="gazdasagiRB">
-            <label>Jogi</label><input type="radio" name="agazat" id="jogiRB">
-            <label>Mezőgazdasági</label><input type="radio" name="agazat" id="mezogazdasagiRB">
-            <label>Művészeti</label><input type="radio" name="agazat" id="muveszetiRB">
-            <label>Vendéglátói</label><input type="radio" name="agazat" id="vendeglatoiRB">
+        <div class="agazatok">
+            <div class="agazat"><img src="/img/agazatok/egeszsegugy.svg" class="agazatIcon"><p>Egészségügy</p></div>
+            <div class="agazat"><img src="/img/agazatok/elelmiszeripar.svg" class="agazatIcon"><p>Élelmiszeripar</p></div>
+            <div class="agazat"><img src="/img/agazatok/epiteszipar.svg" class="agazatIcon"><p>Építészipar</p></div>
+            <div class="agazat"><img src="/img/agazatok/gazdasagi.svg" class="agazatIcon"><p>Gazdasági</p></div>
+            <div class="agazat"><img src="/img/agazatok/gepipar.svg" class="agazatIcon"><p>Gépipar</p></div>
+            <div class="agazat"><img src="/img/agazatok/informatika.svg" class="agazatIcon"><p>Informatika</p></div>
+            <div class="agazat"><img src="/img/agazatok/jogi.svg" class="agazatIcon"><p>Jogi</p></div>
+            <div class="agazat"><img src="/img/agazatok/mezogazdasagi.svg" class="agazatIcon"><p>Mezőgazdasági</p></div>
+            <div class="agazat"><img src="/img/agazatok/muveszeti.svg" class="agazatIcon"><p>Művészeti</p></div>
+            <div class="agazat"><img src="/img/agazatok/tudományos.svg" class="agazatIcon"><p>Tudományos</p></div>
+            <div class="agazat"><img src="/img/agazatok/vendéglátói.svg" class="agazatIcon"><p>Vendéglátói</p></div>
+            <div class="agazat"><img src="/img/agazatok/szorakoztatoipar.svg" class="agazatIcon"><p>Filmipar</p></div>
+        </div>
+        <img src="/img/Icon/email.png" class="icon">
         <p>Email</p>
-            <input type="text" id="Email" class="textinput">
+            <input type="text" id="Email" class="textinput"><br>
+        <img src="/img/Icon/jelszo.png" class="icon">
         <p>Jelszó</p>
-            <input type="text" id="Jelszo" class="textinput">
-            <button>Generálás</button>
-            <button>Inkább magam adom meg</button>
+            <input type="text" id="Jelszo" class="textinput"><br>
+            <button id="generalas" class="jelszoBtn">Generálás</button>
+            <button id="sajat" class="jelszoBtn">Inkább magam adom meg</button><br>
+            <button id="regisztracioBtn">Regisztráció</button>
     </div>
 </body>
 <script src="script.js"></script>
 </html>
+

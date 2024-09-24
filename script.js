@@ -1,2 +1,6 @@
-//https://thenounproject.com/browse/collection-icon/professions-179261/?p=1
-//https://thenounproject.com/browse/collection-icon/job-professions-167452/?p=1
+function Kor(val,id) {
+    if (id == "Kor")
+        document.getElementById('KorText').value=val; 
+    else
+        document.getElementById('Kor').value=val; 
+}
