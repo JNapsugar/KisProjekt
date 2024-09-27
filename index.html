@@ -8,48 +8,55 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <video autoplay muted loop id="hatter">
+        <source src="img/hatter3.mp4" type="video/mp4">
+    </video>
+
     <div id="content">
         <h1>Regisztráció</h1>
-        <img src="/img/Icon/nev.png" class="icon">
-        <p>Név</p>
+        <img src="img/Icon/nev.png" class="icon">
+        <p>Név:</p>
             <input type="text" id="Nev" class="textinput"><br>
-        <img src="/img/Icon/eletkor.png" class="icon">
-        <p>Kor</p>
+        <img src="img/Icon/eletkor.png" class="icon">
+        <p>Kor:</p>
             <input type="range" id="Kor" min="1" max="100" onchange="Kor(this.value, this.id);">
-            <input type="number" id="KorText" value="" class="textinput" onchange="Kor(this.value, this.id);"><br>
-        <img src="./img/Icon/nem.png" class="icon">
-        <p>Nem</p>
-            <label>Nő</label><input type="radio" name="nem" id="NoRB">
-            <label>Férfi</label><input type="radio" name="nem" id="FerfiRB">
-            <label>Egyéb</label><input type="radio" name="nem" id="egyebNemRB"><br>
-        <img src="./img/Icon/foglalkozas.png" class="icon">
-        <p>Foglalkozás</p>
+            <input type="number" id="KorText" value="" class="textinput" onchange="Kor(this.value, this.id);" min="0" max="100"><br>
+        <img src="img/Icon/nem.png" class="icon">
+        <p>Nem:</p>
+            <label>Nő</label><input type="radio" name="nem" id="Nő" class="nemRB">
+            <label>Férfi</label><input type="radio" name="nem" id="Férfi" class="nemRB">
+            <label>Egyéb</label><input type="radio" name="nem" id="Egyéb" class="nemRB"><br>
+        <img src="img/Icon/foglalkozas.png" class="icon">
+        <p>Foglalkozás:</p>
             <input type="text" id="Foglalkozás" class="textinput"><br>
-        <img src="/img/Icon/agazat.png" class="icon">
-        <p>Ágazat</p>
+        <img src="img/Icon/agazat.png" class="icon">
+        <p>Ágazat:</p>
         <div class="agazatok">
-            <div class="agazat"><img src="/img/agazatok/egeszsegugy.svg" class="agazatIcon"><p>Egészségügy</p></div>
-            <div class="agazat"><img src="/img/agazatok/elelmiszeripar.svg" class="agazatIcon"><p>Élelmiszeripar</p></div>
-            <div class="agazat"><img src="/img/agazatok/epiteszipar.svg" class="agazatIcon"><p>Építészipar</p></div>
-            <div class="agazat"><img src="/img/agazatok/gazdasagi.svg" class="agazatIcon"><p>Gazdasági</p></div>
-            <div class="agazat"><img src="/img/agazatok/gepipar.svg" class="agazatIcon"><p>Gépipar</p></div>
-            <div class="agazat"><img src="/img/agazatok/informatika.svg" class="agazatIcon"><p>Informatika</p></div>
-            <div class="agazat"><img src="/img/agazatok/jogi.svg" class="agazatIcon"><p>Jogi</p></div>
-            <div class="agazat"><img src="/img/agazatok/mezogazdasagi.svg" class="agazatIcon"><p>Mezőgazdasági</p></div>
-            <div class="agazat"><img src="/img/agazatok/muveszeti.svg" class="agazatIcon"><p>Művészeti</p></div>
-            <div class="agazat"><img src="/img/agazatok/tudományos.svg" class="agazatIcon"><p>Tudományos</p></div>
-            <div class="agazat"><img src="/img/agazatok/vendéglátói.svg" class="agazatIcon"><p>Vendéglátói</p></div>
-            <div class="agazat"><img src="/img/agazatok/szorakoztatoipar.svg" class="agazatIcon"><p>Filmipar</p></div>
+            <div class="agazat" id="Egészségügy"><img src="img/agazatok/egeszsegugy.svg" class="agazatIcon"><p>Egészségügy</p></div>
+            <div class="agazat" id="Élelmiszeripar"><img src="img/agazatok/elelmiszeripar.svg" class="agazatIcon"><p>Élelmiszeripar</p></div>
+            <div class="agazat" id="Építészipar"><img src="img/agazatok/epiteszipar.svg" class="agazatIcon"><p>Építészipar</p></div>
+            <div class="agazat" id="Gazdasági"><img src="img/agazatok/gazdasagi.svg" class="agazatIcon"><p>Gazdasági</p></div>
+            <div class="agazat" id="Gépipar"><img src="img/agazatok/gepipar.svg" class="agazatIcon"><p>Gépipar</p></div>
+            <div class="agazat" id="informatika"><img src="img/agazatok/informatika.svg" class="agazatIcon"><p>Informatika</p></div>
+            <div class="agazat" id="Jogi"><img src="img/agazatok/jogi.svg" class="agazatIcon"><p>Jogi</p></div>
+            <div class="agazat" id="Mezőgazdasági"><img src="img/agazatok/mezogazdasagi.svg" class="agazatIcon"><p>Mezőgazdasági</p></div>
+            <div class="agazat" id="Művészeti"><img src="img/agazatok/muveszeti.svg" class="agazatIcon"><p>Művészeti</p></div>
+            <div class="agazat" id="Tudományos"><img src="img/agazatok/tudományos.svg" class="agazatIcon"><p>Tudományos</p></div>
+            <div class="agazat" id="Vendéglátói"><img src="img/agazatok/vendéglátói.svg" class="agazatIcon"><p>Vendéglátói</p></div>
+            <div class="agazat" id="Filmipar"><img src="img/agazatok/szorakoztatoipar.svg" class="agazatIcon"><p>Filmipar</p></div>
         </div>
-        <img src="/img/Icon/email.png" class="icon">
-        <p>Email</p>
+        <img src="img/Icon/email.png" class="icon">
+        <p>Email:</p>
             <input type="text" id="Email" class="textinput"><br>
-        <img src="/img/Icon/jelszo.png" class="icon">
-        <p>Jelszó</p>
-            <input type="text" id="Jelszo" class="textinput"><br>
+        <img src="img/Icon/jelszo.png" class="icon">
+        <p>Jelszó:</p>
+            <input type="password" id="Jelszo" class="textinput">
+            <img src="img/Icon/jelszoRejtett.svg" id="jelszoSzem"><br>
             <button id="generalas" class="jelszoBtn">Generálás</button>
             <button id="sajat" class="jelszoBtn">Inkább magam adom meg</button><br>
             <button id="regisztracioBtn">Regisztráció</button>
+            <p id="hiba"></p>
+            
     </div>
 </body>
 <script src="script.js"></script>
