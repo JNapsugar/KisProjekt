@@ -122,6 +122,40 @@ p{
     width: 3rem;
 }
 
+.JelszoTooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.JelszoTooltip .JelszoFeltetel {
+    visibility: hidden;
+    width: 28rem;
+    background-color: rgba(0, 0, 0, 0.678);
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 5px 2px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -14rem;
+}
+
+.JelszoTooltip:hover .JelszoFeltetel {
+    visibility: visible;
+}
+
+.JelszoTooltip .JelszoFeltetel {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.JelszoTooltip:hover .JelszoFeltetel {
+    opacity: 1;
+}
+
 .jelszoBtn{
     height: 2rem;
     width: 12rem;
