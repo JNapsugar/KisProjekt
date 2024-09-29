@@ -68,6 +68,7 @@ p{
 
 .agazatok{
     min-height: 25rem;
+    display: inline-block;
 }
 
 .agazat{

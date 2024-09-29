@@ -44,7 +44,7 @@ const karakterek ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345678
 document.getElementById("generalas").addEventListener("click", function(){
     let generalt = "";
     const length = karakterek.length
-    for ( let i = 0; i < 15; i++ ) {
+    for ( let i = 0; i < 14; i++ ) {
         generalt += karakterek.charAt(Math.floor(Math.random() * length));
     }
     jelszo.value = generalt + Math.floor(Math.random() * 9)
@@ -96,9 +96,11 @@ document.getElementById("regisztracioBtn").addEventListener("click", function(){
     }
     else if(!/\d/.test(jelszoInput) || !/[A-Z]/.test(jelszoInput) || !/[a-z]/.test(jelszoInput) || jelszoInput.length< 5){
         document.getElementById("hiba").innerText = "Nem megfelelő jelszó!"  
+        document.getElementById("Jelszo").classList.add("hibasinput")
     }
-    else if(!(emailInput.includes('@')&&emailInput.includes('.'))){
+    else if(!(emailInput.includes('@') && (emailInput.includes('.com') || emailInput.includes('.hu') || emailInput.includes('.edu') ))){
         document.getElementById("hiba").innerText = "Nem megfelelő email!"  
+        document.getElementById("Email").classList.add("hibasinput")
     }
     else{
 
